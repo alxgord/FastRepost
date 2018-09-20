@@ -5,7 +5,7 @@ import com.artto.fastrepost.di.scope.ViewScope
 import com.artto.fastrepost.presentation.presenter.MainPresenter
 import dagger.Subcomponent
 
-@Subcomponent( modules = [MainActivityModule::class] )
+@Subcomponent(modules = [MainActivityModule::class])
 @ViewScope
 interface MainActivityComponent {
 

@@ -5,4 +5,8 @@ import com.artto.fastrepost.presentation.view.MainView
 
 @InjectViewState
 class MainPresenter : BaseMvpPresenter<MainView>() {
+
+    override fun onFirstViewAttach() {
+        viewState.navigateToRepost()
+    }
 }
