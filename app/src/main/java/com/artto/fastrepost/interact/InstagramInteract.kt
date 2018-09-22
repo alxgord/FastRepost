@@ -1,7 +1,7 @@
 package com.artto.fastrepost.interact
 
 import com.artto.fastrepost.data.instagram.api.InstagramApi
-import com.artto.fastrepost.data.instagram.response.InstagramUserPost
+import com.artto.fastrepost.data.instagram.response.post.InstagramUserPost
 import io.reactivex.Single
 
 class InstagramInteract(private val api: InstagramApi) {
