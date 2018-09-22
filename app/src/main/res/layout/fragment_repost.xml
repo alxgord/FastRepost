@@ -1,55 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingEnd="8dp"
-    android:paddingStart="8dp"
-    android:paddingTop="8dp">
+    android:background="@android:color/white"
+    android:fillViewport="true"
+    android:overScrollMode="never">
 
-    <ImageView
-        android:id="@+id/image_view_repost_content"
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="4dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@id/edit_text_repost_caption"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/edit_text_repost_caption"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@id/button_repost_repost"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image_view_repost_content" />
-
-    <Button
-        android:id="@+id/button_repost_save"
-        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/repost_save"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/button_repost_repost"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_text_repost_caption" />
+        android:padding="8dp">
 
-    <Button
-        android:id="@+id/button_repost_repost"
-        android:layout_width="0dp"
-        android:layout_height="46dp"
-        android:text="@string/repost_repost"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/button_repost_save"
-        app:layout_constraintTop_toBottomOf="@id/edit_text_repost_caption" />
+        <ImageView
+            android:id="@+id/image_view_repost_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/repost_image_shadow"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@id/edit_text_repost_caption"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+        <EditText
+            android:id="@+id/edit_text_repost_caption"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/repost_image_shadow"
+            android:gravity="top"
+            android:inputType="textMultiLine|textFilter"
+            android:padding="12dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/guid_line_repost_buttons"
+            app:layout_constraintTop_toBottomOf="@id/image_view_repost_content" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guid_line_repost_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="52dp" />
+
+        <Button
+            android:id="@+id/button_repost_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/repost_save"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_repost_repost"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guid_line_repost_buttons" />
+
+        <Button
+            android:id="@+id/button_repost_repost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/repost_repost"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_repost_save"
+            app:layout_constraintTop_toBottomOf="@id/guid_line_repost_buttons" />
 
 
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
