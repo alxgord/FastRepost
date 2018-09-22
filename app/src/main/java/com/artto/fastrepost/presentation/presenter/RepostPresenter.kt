@@ -37,8 +37,11 @@ class RepostPresenter(private val interact: RepostInteract) : BaseMvpPresenter<R
         interact
                 .getPost(shortCode)
                 .subscribe(
-                        { viewState.setImage(it.displayUrl) },
-                        { viewState.showToast(it.localizedMessage) })
+                        {
+                            viewState.setImage(it.content[0].displayUrl)
+                            viewState.setCaption(it.caption)
+                        },
+                        { it.printStackTrace() })
                 .let { disposables.add(it) }
     }
 }
