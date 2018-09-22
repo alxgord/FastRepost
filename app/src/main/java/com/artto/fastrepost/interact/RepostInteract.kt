@@ -1,7 +1,7 @@
 package com.artto.fastrepost.interact
 
 import com.artto.fastrepost.data.instagram.api.InstagramApiConstants
-import com.artto.fastrepost.data.instagram.response.InstagramUserPost
+import com.artto.fastrepost.data.instagram.response.post.InstagramUserPost
 import io.reactivex.Observable
 import io.reactivex.Single
 
@@ -17,7 +17,7 @@ class RepostInteract(private val clipboardInteract: ClipboardInteract,
     fun getPostUrl() =
             clipboardInteract
                     .getCipText()
-                    .checkForPostUrl().firstOrError()
+                    .checkForPostUrl()
 
     fun getPost(shortCode: String): Single<InstagramUserPost> =
             instagramInteract
