@@ -1,6 +1,7 @@
 package com.artto.fastrepost.presentation.presenter
 
 import com.arellomobile.mvp.InjectViewState
+import com.artto.fastrepost.data.instagram.response.post.InstagramUserPost
 import com.artto.fastrepost.interact.RepostInteract
 import com.artto.fastrepost.presentation.view.RepostView
 
@@ -37,11 +38,16 @@ class RepostPresenter(private val interact: RepostInteract) : BaseMvpPresenter<R
         interact
                 .getPost(shortCode)
                 .subscribe(
-                        {
-                            viewState.setImage(it.content[0].displayUrl)
-                            viewState.setCaption(it.caption)
-                        },
+                        { checkContentType(it) },
                         { it.printStackTrace() })
                 .let { disposables.add(it) }
+    }
+
+    private fun checkContentType(post: InstagramUserPost) {
+        viewState.setCaption (post.caption)
+        when (post.type) {
+            InstagramUserPost.TYPE_VIDEO -> viewState.setVideo(post.content[0].videoUrl)
+            InstagramUserPost.TYPE_IMAGE, InstagramUserPost.TYPE_SIDECAR -> viewState.setImage(post.content[0].displayUrl)
+        }
     }
 }

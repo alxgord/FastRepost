@@ -13,5 +13,8 @@ interface RepostView : BaseMvpView {
     fun setImage(url: String)
 
     @StateStrategyType(AddToEndSingleStrategy::class)
+    fun setVideo(url: String)
+
+    @StateStrategyType(AddToEndSingleStrategy::class)
     fun setCaption(text: String)
 }
