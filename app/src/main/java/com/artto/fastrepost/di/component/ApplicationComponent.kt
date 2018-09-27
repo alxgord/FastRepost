@@ -17,4 +17,8 @@ interface ApplicationComponent {
     fun mainActivityComponent(mainActivityModule: MainActivityModule): MainActivityComponent
 
     fun repostComponent(repostModule: RepostModule): RepostComponent
+
+    fun imageItemComponent(imageItemModule: ImageItemModule): ImageItemComponent
+
+    fun videoItemComponent(videoItemModule: VideoItemModule): VideoItemComponent
 }

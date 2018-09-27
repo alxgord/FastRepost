@@ -9,12 +9,13 @@ interface RepostView : BaseMvpView {
     @StateStrategyType(OneExecutionStateStrategy::class)
     fun showToast(text: String)
 
-    @StateStrategyType(AddToEndSingleStrategy::class)
-    fun setImage(url: String)
+    @StateStrategyType(OneExecutionStateStrategy::class)
+    fun showIndicator(show: Boolean)
 
-    @StateStrategyType(AddToEndSingleStrategy::class)
-    fun setVideo(url: String)
+    @StateStrategyType(OneExecutionStateStrategy::class)
+    fun notifyDataSetChanged()
 
     @StateStrategyType(AddToEndSingleStrategy::class)
     fun setCaption(text: String)
+
 }

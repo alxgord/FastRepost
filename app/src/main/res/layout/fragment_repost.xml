@@ -17,42 +17,24 @@
             android:layout_height="wrap_content"
             android:background="@drawable/content_shadow"
             android:paddingStart="7dp"
-            android:paddingEnd="7dp"
             android:paddingTop="4dp"
+            android:paddingEnd="7dp"
             android:paddingBottom="12dp"
             app:layout_constraintBottom_toTopOf="@id/edit_text_repost_caption"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="spread_inside">
 
-            <ImageView
-                android:id="@+id/image_view_repost_content"
+            <com.artto.fastrepost.ui.element.ResizableViewPager
+                android:id="@+id/view_pager_repost_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:visibility="gone" />
+                android:overScrollMode="never" />
 
-            <VideoView
-                android:id="@+id/video_view_repost_content"
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/circle_indicator_repost_content"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone" />
-
-            <ImageView
-                android:id="@+id/image_view_repost_video_play"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_play"
-                android:visibility="gone" />
-
-            <ImageView
-                android:id="@+id/image_view_repost_video_pause"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_pause"
-                android:visibility="gone" />
+                android:layout_height="32dp"
+                android:layout_gravity="bottom" />
 
         </FrameLayout>
 
