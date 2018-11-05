@@ -6,6 +6,15 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="CircularProgressBar">
+        <item name="backgroundStrokeColor">@color/colorAccent</item>
+        <item name="backgroundStrokeWidth">10dp</item>
+        <item name="drawBackgroundStroke">true</item>
+        <item name="foregroundStrokeColor">@android:color/white</item>
+        <item name="indeterminate">true</item>
     </style>
 
 </resources>

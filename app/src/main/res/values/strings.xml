@@ -1,6 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FastRepost</string>
+
+    <string name="app_name" translatable="false">FastRepost</string>
+
+    <string name="ad_block_test" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ad_block_1" translatable="false">ca-app-pub-6538899012774414/1285836446</string>
+
     <string name="repost_repost">Repost</string>
     <string name="repost_save">Save</string>
-    <string name="repost_startup_hint">Please copy post link in Instagram</string>
+    <string name="history_label">Reposts history:</string>
+    <string name="repost_hint_title">For repost:</string>
+    <string name="repost_hint_first">1. Click on button</string>
+    <string name="repost_hint_second">2. Chose «Copy Link»</string>
+    <string name="repost_caption_hint">Long click to paste caption</string>
+    <string name="repost_toast_offline">You are offline. Please, enable connection.</string>
+    <string name="caption_editor_button_ok">OK</string>
+
 </resources>

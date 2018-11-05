@@ -1,7 +1,5 @@
 package com.artto.fastrepost.data.instagram.response
 
-import com.artto.fastrepost.data.instagram.response.post.InstagramPostContentItem
-import com.artto.fastrepost.data.instagram.response.post.InstagramUserPost
 import com.fasterxml.jackson.core.JsonParser
 import com.fasterxml.jackson.core.JsonProcessingException
 import com.fasterxml.jackson.databind.DeserializationContext
@@ -55,10 +53,14 @@ class GetPostInstagramDeserializer(vc: Class<*>? = null) : StdDeserializer<GetPo
             content.addAll(
                     when (type) {
                         InstagramUserPost.TYPE_IMAGE, InstagramUserPost.TYPE_VIDEO ->
-                            listOf(InstagramPostContentItem(type, id, shortCode, rootNode.get("display_url").textValue())
-                                    .apply {
-                                        if (type == InstagramUserPost.TYPE_VIDEO)
-                                            videoUrl = rootNode.get("video_url").textValue()
+                            listOf(
+                                    InstagramPostContentItem().also {
+                                        it.type = type
+                                        it.id = id
+                                        it.shortCode = shortCode
+                                        it.displayUrl = rootNode.get("display_url").textValue()
+                                        if (it.type == InstagramUserPost.TYPE_VIDEO)
+                                            it.videoUrl = rootNode.get("video_url").textValue()
                                     })
 
                         InstagramUserPost.TYPE_SIDECAR ->
@@ -67,14 +69,13 @@ class GetPostInstagramDeserializer(vc: Class<*>? = null) : StdDeserializer<GetPo
                                     .get("edges")
                                     .map {
                                         val node = it.get("node")
-                                        InstagramPostContentItem(
-                                                node.get("__typename").textValue(),
-                                                node.get("id").textValue(),
-                                                node.get("shortcode").textValue(),
-                                                node.get("display_url").textValue()
-                                        ).apply {
-                                            if (type == InstagramUserPost.TYPE_VIDEO)
-                                                videoUrl = node.get("video_url").textValue()
+                                        InstagramPostContentItem().also {
+                                            it.type = node.get("__typename").textValue()
+                                            it.id = node.get("id").textValue()
+                                            it.shortCode = node.get("shortcode").textValue()
+                                            it.displayUrl = node.get("display_url").textValue()
+                                            if (it.type == InstagramUserPost.TYPE_VIDEO)
+                                                it.videoUrl = node.get("video_url").textValue()
                                         }
                                     }
                         else -> listOf(InstagramPostContentItem())

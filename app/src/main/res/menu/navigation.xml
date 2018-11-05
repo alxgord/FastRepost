@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_navigation_repost"
+        android:icon="@drawable/ic_repost_black_24dp"
+        android:title="" />
+
+    <item
+        android:id="@+id/item_navigation_history"
+        android:icon="@drawable/ic_history_black_24dp"
+        android:title="" />
+
+</menu>

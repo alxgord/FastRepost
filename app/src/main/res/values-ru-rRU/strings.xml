@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="repost_repost">Репост</string>
+    <string name="repost_save">Сохранить</string>
+    <string name="history_label">История репостов:</string>
+    <string name="repost_hint_title">Чтобы сделать репост:</string>
+    <string name="repost_hint_first">1. Нажмите на кнопку</string>
+    <string name="repost_hint_second">2. Выберите «Копировать ссылку»</string>
+    <string name="repost_caption_hint">Долгое нажатие чтобы вставить подпись</string>
+    <string name="repost_toast_offline">Вы не в сети. Пожалуйста, включите соединение.</string>
+    <string name="caption_editor_button_ok">ОК</string>
+</resources>
