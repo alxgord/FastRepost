@@ -30,7 +30,7 @@ class CaptionFragment : BaseFragment(), CaptionView {
     @ProvidePresenter
     fun providePresenter() = ApplicationLoader
             .applicationComponent
-            .captptionComponent(CaptionModule())
+            .captionComponent(CaptionModule())
             .captionPresenter()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =

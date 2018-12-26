@@ -29,5 +29,4 @@ class ApplicationLoader : Application() {
         MobileAds.initialize(this, "ca-app-pub-6538899012774414~8318148652")
     }
 
-
 }

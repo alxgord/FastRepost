@@ -7,6 +7,7 @@ import com.artto.fastrepost.data.instagram.InstagramRepository
 import com.artto.fastrepost.data.instagram.api.InstagramApiConstants
 import com.artto.fastrepost.data.instagram.response.InstagramPostContentItem
 import com.artto.fastrepost.data.instagram.response.InstagramUserPost
+import com.artto.fastrepost.data.properties.PropertiesManager
 import com.artto.fastrepost.data.storage.StorageManager
 import io.reactivex.Completable
 import io.reactivex.Observable
@@ -15,7 +16,8 @@ import io.reactivex.Single
 class RepostInteract(private val clipboardRepository: ClipboardRepository,
                      private val storageManager: StorageManager,
                      private val historyRepository: HistoryRepository,
-                     private val instagramRepository: InstagramRepository) {
+                     private val instagramRepository: InstagramRepository,
+                     private val propertiesManager: PropertiesManager) {
 
     fun setClipText(text: String): Completable =
             clipboardRepository.setClipText("FastRepost", text)
@@ -40,6 +42,8 @@ class RepostInteract(private val clipboardRepository: ClipboardRepository,
     fun addToHistory(shortCode: String, position: Int): Completable =
             historyRepository.insert(HistoryEntity(shortCode = shortCode, mediaPosition = position))
                     .ignoreElement()
+
+    fun getProperties() = propertiesManager.properties
 
     private fun Observable<String>.checkForPostUrl(): Observable<String> = this
             .filter { it.contains(InstagramApiConstants.POST_URL) }

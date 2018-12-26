@@ -9,4 +9,7 @@
     <string name="repost_caption_hint">Долгое нажатие чтобы вставить подпись</string>
     <string name="repost_toast_offline">Вы не в сети. Пожалуйста, включите соединение.</string>
     <string name="caption_editor_button_ok">ОК</string>
+    <string name="dialog_rate_rate_now">Оценить сейчас!</string>
+    <string name="dialog_rate_remind">Напомнить позже</string>
+    <string name="dialog_rate_title">Оцените приложение</string>
 </resources>

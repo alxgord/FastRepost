@@ -25,6 +25,13 @@ class RepostPresenter(private val interact: RepostInteract) : BaseMvpPresenter<R
                 .addTo(disposables)
     }
 
+    private fun checkIsAppRated() {
+        interact.getProperties()?.let {
+            if (!it.isAppRated)
+                viewState.showRateDialog()
+        }
+    }
+
     fun onResume() {
         interact.getPostUrl()
                 .subscribe(

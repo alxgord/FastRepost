@@ -5,6 +5,7 @@ import com.artto.fastrepost.di.scope.ViewScope
 import com.artto.fastrepost.data.clipboard.ClipboardRepository
 import com.artto.fastrepost.data.database.history.HistoryRepository
 import com.artto.fastrepost.data.instagram.InstagramRepository
+import com.artto.fastrepost.data.properties.PropertiesManager
 import com.artto.fastrepost.ui.repost.RepostInteract
 import com.artto.fastrepost.ui.repost.RepostPresenter
 import dagger.Module
@@ -23,6 +24,13 @@ class RepostModule {
             clipboardRepository: ClipboardRepository,
             storageManager: StorageManager,
             historyRepository: HistoryRepository,
-            instagramRepository: InstagramRepository) =
-            RepostInteract(clipboardRepository, storageManager, historyRepository, instagramRepository)
+            instagramRepository: InstagramRepository,
+            propertiesManager: PropertiesManager) =
+            RepostInteract(
+                    clipboardRepository,
+                    storageManager,
+                    historyRepository,
+                    instagramRepository,
+                    propertiesManager
+            )
 }

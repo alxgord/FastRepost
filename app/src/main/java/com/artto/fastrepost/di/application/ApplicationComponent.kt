@@ -2,10 +2,9 @@ package com.artto.fastrepost.di.application
 
 import com.artto.fastrepost.di.caption.CaptionComponent
 import com.artto.fastrepost.di.caption.CaptionModule
-import com.artto.fastrepost.di.data.ClipboardModule
-import com.artto.fastrepost.di.data.DatabaseModule
-import com.artto.fastrepost.di.data.InstagramApiModule
-import com.artto.fastrepost.di.data.StorageModule
+import com.artto.fastrepost.di.data.*
+import com.artto.fastrepost.di.dialog.rate.RateComponent
+import com.artto.fastrepost.di.dialog.rate.RateModule
 import com.artto.fastrepost.di.main.MainActivityComponent
 import com.artto.fastrepost.di.history.HistoryComponent
 import com.artto.fastrepost.di.history.HistoryModule
@@ -25,7 +24,8 @@ import dagger.Component
             InstagramApiModule::class,
             ClipboardModule::class,
             StorageModule::class,
-            DatabaseModule::class
+            DatabaseModule::class,
+            PropertiesModule::class
         ]
 )
 @ApplicationScope
@@ -41,6 +41,8 @@ interface ApplicationComponent {
 
     fun videoItemComponent(module: VideoItemModule): VideoItemComponent
 
-    fun captptionComponent(module: CaptionModule): CaptionComponent
+    fun captionComponent(module: CaptionModule): CaptionComponent
+
+    fun rateComponent(module: RateModule): RateComponent
 
 }

@@ -16,4 +16,8 @@
     <string name="repost_toast_offline">You are offline. Please, enable connection.</string>
     <string name="caption_editor_button_ok">OK</string>
 
+    <string name="dialog_rate_rate_now">Rate now!</string>
+    <string name="dialog_rate_remind">Remind me later</string>
+    <string name="dialog_rate_title">Rate application</string>
+
 </resources>

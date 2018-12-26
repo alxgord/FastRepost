@@ -34,4 +34,7 @@ interface RepostView : BaseMvpView {
     @StateStrategyType(OneExecutionStateStrategy::class)
     fun showCaptionWindow(text: String)
 
+    @StateStrategyType(OneExecutionStateStrategy::class)
+    fun showRateDialog()
+
 }

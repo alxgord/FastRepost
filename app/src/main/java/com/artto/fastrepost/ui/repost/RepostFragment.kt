@@ -17,6 +17,7 @@ import com.artto.fastrepost.di.repost.RepostModule
 import com.artto.fastrepost.ui.base.BaseFragment
 import com.artto.fastrepost.ui.caption.CaptionFragment
 import com.artto.fastrepost.ui.caption.CaptionRouter
+import com.artto.fastrepost.ui.dialog.rate.RateDialogFragment
 import kotlinx.android.synthetic.main.fragment_repost.*
 import java.io.File
 
@@ -59,6 +60,8 @@ class RepostFragment : BaseFragment(), RepostView, CaptionRouter {
 
         circle_indicator_repost_content.setViewPager(view_pager_repost_content)
         contentPagerAdapter.registerDataSetObserver(circle_indicator_repost_content.dataSetObserver)
+
+        RateDialogFragment().show(childFragmentManager, null)
     }
 
     override fun showProgressBar(show: Boolean) {
@@ -108,6 +111,8 @@ class RepostFragment : BaseFragment(), RepostView, CaptionRouter {
         card_view_repost_hint.visibility = if (show) View.VISIBLE else View.GONE
         constraint_layout_repost_container.visibility = if (show) View.GONE else View.VISIBLE
     }
+
+    override fun showRateDialog() = RateDialogFragment().show(childFragmentManager, null)
 
     override fun onResume() {
         super.onResume()

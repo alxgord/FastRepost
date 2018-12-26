@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "72915301147",
+    "firebase_url": "https://fastrepost-c83b2.firebaseio.com",
+    "project_id": "fastrepost-c83b2",
+    "storage_bucket": "fastrepost-c83b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72915301147:android:92eefb7b3649345b",
+        "android_client_info": {
+          "package_name": "com.artto.fastrepost"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72915301147-9fofq19us02741kr2ra6d7h6n7egeagm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.artto.fastrepost",
+            "certificate_hash": "1d9a3de441ba3cd9c1e45f92aad1a953c0192df9"
+          }
+        },
+        {
+          "client_id": "72915301147-661eeukh42pikoh37g5bkpdgsbcfnhu0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5bMiKLXB6HS6sC7PXdLkU-JnjAy1XoMY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72915301147-661eeukh42pikoh37g5bkpdgsbcfnhu0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      },
+      "admob_app_id": "ca-app-pub-6538899012774414~8318148652"
+    }
+  ],
+  "configuration_version": "1"
+}
