@@ -5,7 +5,7 @@ import android.os.Environment
 import com.artto.fastrepost.R
 import com.artto.fastrepost.data.instagram.response.InstagramPostContentItem
 import com.artto.fastrepost.data.instagram.response.InstagramUserPost
-import com.artto.fastrepost.util.enqueue
+import com.artto.fastrepost.util.extension.enqueue
 import io.reactivex.Single
 import okhttp3.*
 import okio.Source

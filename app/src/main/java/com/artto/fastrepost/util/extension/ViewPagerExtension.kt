@@ -1,4 +1,4 @@
-package com.artto.fastrepost.util
+package com.artto.fastrepost.util.extension
 
 import android.support.v4.view.ViewPager
 

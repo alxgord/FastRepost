@@ -1,4 +1,4 @@
-package com.artto.fastrepost.rx
+package com.artto.fastrepost.util.rx
 
 import android.content.ClipData
 import android.content.ClipboardManager

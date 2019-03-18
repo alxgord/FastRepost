@@ -8,7 +8,7 @@ import com.artto.fastrepost.ApplicationLoader
 import com.artto.fastrepost.R
 import com.artto.fastrepost.di.caption.CaptionModule
 import com.artto.fastrepost.ui.base.BaseFragment
-import com.artto.fastrepost.util.hideKeyboard
+import com.artto.fastrepost.util.extension.hideKeyboard
 import kotlinx.android.synthetic.main.fragment_caption.*
 import kotlinx.android.synthetic.main.fragment_caption.view.*
 

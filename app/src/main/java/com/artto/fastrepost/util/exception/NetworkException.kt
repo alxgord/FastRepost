@@ -1,4 +1,4 @@
-package com.artto.fastrepost.exception
+package com.artto.fastrepost.util.exception
 
 import java.io.IOException
 

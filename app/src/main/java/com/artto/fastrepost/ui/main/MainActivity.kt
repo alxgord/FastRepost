@@ -11,7 +11,7 @@ import com.artto.fastrepost.R
 import com.artto.fastrepost.ApplicationLoader
 import com.artto.fastrepost.di.main.MainActivityModule
 import com.artto.fastrepost.ui.base.BaseActivity
-import com.artto.fastrepost.util.onPageSelectedListener
+import com.artto.fastrepost.util.extension.onPageSelectedListener
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity(), MainView {

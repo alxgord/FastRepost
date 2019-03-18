@@ -43,7 +43,7 @@ class RepostInteract(private val clipboardRepository: ClipboardRepository,
             historyRepository.insert(HistoryEntity(shortCode = shortCode, mediaPosition = position))
                     .ignoreElement()
 
-    fun getProperties() = propertiesManager.properties
+    fun isAppRated() = propertiesManager.properties?.isAppRated
 
     private fun Observable<String>.checkForPostUrl(): Observable<String> = this
             .filter { it.contains(InstagramApiConstants.POST_URL) }

@@ -74,7 +74,7 @@ class VideoItemFragment : BaseFragment(), VideoItemView {
     override fun pauseVideo() {
         isPlaying = false
         showIcon(PLAY_ICON)
-        video_view_repost_content.pause()
+        video_view_repost_content?.pause()
     }
 
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {

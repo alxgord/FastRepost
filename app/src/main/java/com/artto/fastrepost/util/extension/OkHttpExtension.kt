@@ -1,4 +1,4 @@
-package com.artto.fastrepost.util
+package com.artto.fastrepost.util.extension
 
 import okhttp3.Call
 import okhttp3.Callback

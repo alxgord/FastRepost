@@ -25,10 +25,12 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:overScrollMode="never"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/ad_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_view_history_label" />
+        app:layout_constraintTop_toBottomOf="@id/text_view_history_label"
+        tools:listitem="@layout/item_history" />
 
     <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/ad_view"

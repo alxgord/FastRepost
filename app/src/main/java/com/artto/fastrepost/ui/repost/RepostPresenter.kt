@@ -25,13 +25,6 @@ class RepostPresenter(private val interact: RepostInteract) : BaseMvpPresenter<R
                 .addTo(disposables)
     }
 
-    private fun checkIsAppRated() {
-        interact.getProperties()?.let {
-            if (!it.isAppRated)
-                viewState.showRateDialog()
-        }
-    }
-
     fun onResume() {
         interact.getPostUrl()
                 .subscribe(
@@ -57,6 +50,10 @@ class RepostPresenter(private val interact: RepostInteract) : BaseMvpPresenter<R
                 .andThen(interact.addToHistory(post.shortCode, position))
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
+                .doOnSubscribe {
+                    if (interact.isAppRated() == false)
+                        viewState.showRateDialog()
+                }
                 .subscribeBy(
                         onComplete = { viewState.showToast(R.string.repost_caption_hint) },
                         onError = {})

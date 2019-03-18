@@ -3,7 +3,7 @@ package com.artto.fastrepost.data.clipboard
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
-import com.artto.fastrepost.rx.RxClipChangedListener
+import com.artto.fastrepost.util.rx.RxClipChangedListener
 import io.reactivex.Completable
 import io.reactivex.Observable
 

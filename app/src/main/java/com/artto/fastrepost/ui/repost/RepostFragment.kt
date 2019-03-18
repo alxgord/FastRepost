@@ -60,8 +60,6 @@ class RepostFragment : BaseFragment(), RepostView, CaptionRouter {
 
         circle_indicator_repost_content.setViewPager(view_pager_repost_content)
         contentPagerAdapter.registerDataSetObserver(circle_indicator_repost_content.dataSetObserver)
-
-        RateDialogFragment().show(childFragmentManager, null)
     }
 
     override fun showProgressBar(show: Boolean) {

@@ -1,4 +1,4 @@
-package com.artto.fastrepost.util
+package com.artto.fastrepost.util.extension
 
 import android.content.Context
 import android.view.View
